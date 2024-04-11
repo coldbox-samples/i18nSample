@@ -9,7 +9,7 @@
     <meta name="author" content="Ortus Solutions, Corp">
 	<script>
 		function setLocale( locale ) {
-		  document.getElementById( "form" ).setAttribute( "action", "/Lang/setLocale?locale=" + locale );
+		  document.getElementById( "form" ).setAttribute( "action", "index.cfm/Lang/setLocale?locale=" + locale );
 		  document.getElementById( "form" ).submit();
 		}
 	</script>
@@ -178,7 +178,7 @@
 								title="GitHub"></iframe>	
 					</form>
 
-					<form action="/Lang/setLocale" method="post" id="form">
+					<form action="index.cfm/Lang/setLocale" method="post" id="form">
 						<button type="submit" onclick="setLocale('en_US')"> #$r( "lang.en" )# </button>
 						<button type="submit" onclick="setLocale('es_SV')"> #$r( "lang.es" )# </button>
 					</form>

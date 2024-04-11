@@ -73,7 +73,7 @@ component {
 		 *
 		 * Uncomment to use, but make sure your .env ENVIRONMENT key is also removed.
 		 */
-		// environments = { development : "localhost,^127\.0\.0\.1" };
+		environments = { development : "localhost,^127\.0\.0\.1" };
 
 		/**
 		 * --------------------------------------------------------------------------
@@ -138,24 +138,7 @@ component {
 		 *
 		 * }
 		 */
-		moduleSettings = {
-			cbi18n = {
-				// The default resource to load and aliased as `default`
-				"defaultResourceBundle" : "includes/i18n/main",
-				// The locale to use when none defined
-				"defaultLocale"         : "en_US",
-				// The default storage for the locale
-				"localeStorage"         : "cookieStorage@cbstorages",
-				// What to emit to via the resource methods if a translation is not found
-				"unknownTranslation"    : "**NOT FOUND**",
-				// If true, we will log to LogBox the missing translations
-				"logUnknownTranslation" : true,
-				// A-la-carte resources to load by name
-				"resourceBundles"       : {},
-				// Your own CFC instantiation path
-				"customResourceService" : ""
-			}
-		};
+		moduleSettings = {};
 
 		/**
 		 * --------------------------------------------------------------------------
@@ -190,6 +173,7 @@ component {
 	 * Development environment
 	 */
 	function development(){
+		coldbox.debugMode = true;
 		// coldbox.customErrorTemplate = "/coldbox/system/exceptions/BugReport.cfm"; // static bug reports
 		coldbox.customErrorTemplate = "/coldbox/system/exceptions/Whoops.cfm"; // interactive bug report
 	}
